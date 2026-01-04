@@ -2,14 +2,17 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+import { ENV } from "./env";
+
 // Configuration Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyAFHTmbJNaRWIlx2gIvEixWtmFSKCxSByM",
-  authDomain: "skillup-cc757.firebaseapp.com",
-  projectId: "skillup-cc757",
-  storageBucket: "skillup-cc757.appspot.com",
-  messagingSenderId: "740566688124",
-  appId: "1:740566688124:web:6d22fdf87dda657c1504f9",
+  apiKey: ENV.API_KEY,
+  authDomain: ENV.AUTH_DOMAIN,
+  projectId: ENV.PROJECT_ID,
+  storageBucket: ENV.STORAGE_BUCKET,
+  messagingSenderId: ENV.MESSAGING_SENDER_ID,
+  appId: ENV.APP_ID,
+  measurementId: ENV.MEASUREMENT_ID,
 };
 
 // Initialize Firebase
